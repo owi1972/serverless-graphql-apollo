@@ -11,6 +11,10 @@ const createResponse = (statusCode, body) => (
   }
 );
 
+module.exports.hello = function(event, context, callback) {
+  callback(null, createResponse(200, { message: 'Hello World', event }));
+};
+
 module.exports.graphql = (event, context, callback) => {
   // Is thre a way to parse json dirrecrly
   const body = JSON.parse(event.body);
