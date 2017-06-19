@@ -18,7 +18,7 @@ if (!process.env.GRAPHQL_ENDPOINT) {
 }
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: process.env.GRAPHQL_ENDPOINT,
+    uri: 'https://tly9mkik1l.execute-api.eu-central-1.amazonaws.com/production/graphql',
   }),
 });
 
